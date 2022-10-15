@@ -49,6 +49,7 @@
                 Server.start(port, new Handler());
             }
         }
+
 ![Adding egregious](https://github.com/alejball/cse15l-lab-reports/blob/c25f862dd2e89fab430cc880a2780d1fa84cf5ab/Screenshot%202022-10-14%20140512.png)
 
 Here, as you can see from the image above I am adding the word "egregious" to my list of words. I am calling the handleRequest method in the Handler class. The part of the code that handles adding words to the list is the first elseif statement. The getPath() method gets the path in the URL and checks if it is equal to "/add". After that, what this portion of the code does is get the query (the stuff after the question mark) using the getQuery() method and separated the string using the split method into an array with the "=" as the indicator for where to split the string. Then, the string in the first index of the array (which is the word I want to add) is added to an ArrayList I have under the name StringList. Then, printed on the screen is "Word added!" to indicate the word has been added to the list of words.
