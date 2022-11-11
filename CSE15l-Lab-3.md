@@ -12,7 +12,7 @@ This command prints out the line number as well as the line where the searched f
     biomed/1472-6882-1-10.txt:393:          become temporarily crazy. Based on experiences like
     plos/journal.pbio.0020101.txt:13:        look at you as if you are crazy. They see an idyllic, sentimental movie, with beautiful
 
-Here we searched for the string "crazy" using the `grep -i` command. We got four appearances and we can see they are printed to the terminal in the format of `<Path>:<line number>     "string where crazy appears"` because we searched through many files. Thanks to the addition of `-n` to the `grep` command, we also know on which line "crazy" appears. 
+Here we searched for the string "crazy" using the `grep -n "string" <Path>` command. We got four appearances and we can see they are printed to the terminal in the format of `<Path>:<line number>   "string where crazy appears"` because we searched through many files. Thanks to the addition of `-n` to the `grep` command, we also know on which line "crazy" appears. 
 
 **Example 2**
 
@@ -29,14 +29,14 @@ Here we searched for the string "crazy" using the `grep -i` command. We got four
         451:          delivery to the distal tubular cells produced by the
         453:          proximal tubular reabsorption) might actually increase
 
-Here, we only searched for the string "tubular" within one file, and we get 11 appearances of "tubular" within the file in the format `<line number>   "String where tubualar appears">` using the `grep -i` command. Now because we know the specific lines where "tubular" appears we can go directly there and not waste any time scrolling up and down to find the correct line.
+Here, we only searched for the string "tubular" within one file, and we get 11 appearances of "tubular" within the file in the format `<line number>   "String where tubualar appears">` using the `grep -n "string" <Path>` command. Now because we know the specific lines where "tubular" appears we can go directly there and not waste any time scrolling up and down to find the correct line.
 
 **Example 3**
 
         [cs15lfa22qi@ieng6-201]:technical:392$ grep -n "outlandish" */*.txt
         [cs15lfa22qi@ieng6-201]:technical:393$ 
 
-Here, we searched for the string "outlandish" within multiple files using the `grep -n` command. Nothing was printed. This simply means there are no appearances of "outlandish" within any of the files we have provided a path to.
+Here, we searched for the string "outlandish" within multiple files using the `grep -n "string" <Path>` command. Nothing was printed. This simply means there are no appearances of "outlandish" within any of the files we have provided a path to.
 
 ## grep -i Examples
 
@@ -50,21 +50,21 @@ This command ignores cases and searches for the desired string in all forms, eve
         biomed/1472-6882-1-10.txt:          become temporarily crazy. Based on experiences like
         plos/journal.pbio.0020101.txt:        look at you as if you are crazy. They see an idyllic, sentimental movie, with beautiful
 
-Here, we searched for "CrAzY" using the `grep -i` command. This is the same as searching for "crazy" or "Crazy," or even "CrazY." Because we searched through many files the output to the terminal was `<Path>:   "String where all forms of CrAzY could appear"`.
+Here, we searched for "CrAzY" using the `grep -i "string" <Path>` command. This is the same as searching for "crazy" or "Crazy," or even "CrazY." Because we searched through many files the output to the terminal was `<Path>:   "String where all forms of CrAzY could appear"`.
 
 **Example 2:**
 
         [cs15lfa22qi@ieng6-201]:technical:395$ grep -i "ChOpStIcK" */*.txt
         plos/journal.pbio.0020101.txt:        instance, it is easy to tell if people eat with knife and fork or with chopsticks, but to
 
-Here we searched for "ChOpStIcK" using the `grep -i` command. This is the same as searching for "chopstick" or "choPStick", or even "ChopsticK," because of the `grep -i` command. In this example, we can see that we found an appearance of a version of "ChOpStIcK" as a substring and it was printed to the terminal in the format `<Path>  "String where some version of ChOpStIcK appears"`. So, we are able to see the command `grep -i` will search for the desired string while ignoring cases, and as a substring.
+Here we searched for "ChOpStIcK" using the `grep -i "string" <Path>` command. This is the same as searching for "chopstick" or "choPStick", or even "ChopsticK," because of the `grep -i` command. In this example, we can see that we found an appearance of a version of "ChOpStIcK" as a substring and it was printed to the terminal in the format `<Path>   "String where some version of ChOpStIcK appears"`. So, we are able to see the command `grep -i` will search for the desired string while ignoring cases, and as a substring.
 
 **Example 3:**
 
         [cs15lfa22qi@ieng6-201]:technical:412$ grep -i "TuRbULeNt" 911report/chapter-12.txt
                             rule at the national level, although that turbulent process does continue to
 
-Here, we searched for "TuRbULeNt" in one file using the `grep -i` command. This is the same as searching for "turbulent" or "TuRbUlEnt" because of the `grep -i` command. All that was printed to the terminal was the line where some version of "TuRbULeNt" appears.
+Here, we searched for "TuRbULeNt" in one file using the `grep -i "string" <Path>` command. This is the same as searching for "turbulent" or "TuRbUlEnt" because of the `grep -i` command. All that was printed to the terminal was the line where some version of "TuRbULeNt" appears.
 
 ## grep -w Examples
 
@@ -92,7 +92,7 @@ This command searches for exact matches to your desired string. For example, usi
         biomed/gb-2002-3-12-research0081.txt:        curation by experts using a full trail of evidence to
         plos/journal.pbio.0020121.txt:        A number of scientists are currently on the trail of suspected CWD disease reservoirs.
 
-Here, we searched for the string "trail" within multiple files using the `grep -w` command. If you look through the results (which are printed in the format `<Path>:  "String"`) you will see they are all appearances of "trail" with "trail" not being a substring of any other string.
+Here, we searched for the string "trail" within multiple files using the `grep -w "string" <Path>` command. If you look through the results (which are printed in the format `<Path>:  "String"`) you will see they are all appearances of "trail" with "trail" not being a substring of any other string.
 
 **Example 2:**
 
@@ -105,7 +105,7 @@ Here, we searched for the string "trail" within multiple files using the `grep -
         biomed/1472-6874-2-1.txt:        level of the internal cervical os. The cervical stump was
         biomed/1472-6963-3-7.txt:            readmissions for debridement and major stump revisions,
 
-Here we searched for "stump" within multiple files using the `grep -w` command. Looking through what was printed to the terminal we can see there are no appearances of "stump" where it is a substring of another string.
+Here we searched for "stump" within multiple files using the `grep -w "string" <Path>` command. Looking through what was printed to the terminal we can see there are no appearances of "stump" where it is a substring of another string.
 
 **Example 3:**
 
@@ -114,19 +114,19 @@ Here we searched for "stump" within multiple files using the `grep -w` command. 
                         bought a car. FBI briefing materials, Penttbom, Dec. 10-11, 2003, p. 150. For their
                         married but could not because he was injured in a car accident there. German BKA
 
-Here, we searched for "car" within one file using the `grep -w` command. Looking through what was printed to the terminal we can see there are no appearances of "car" where it is a substring of another string.
+Here, we searched for "car" within one file using the `grep -w "string" <Path>` command. Looking through what was printed to the terminal we can see there are no appearances of "car" where it is a substring of another string.
 
 ---
 
 To combine everything we've learned, lets say we are looking for "StOp" in all its various forms within a file, but we don't want it to be a substring of anything else, and we want to know on which line they appear.
 
-[cs15lfa22qi@ieng6-201]:technical:425$ grep -w -i -n "StOp" biomed/gb-2002-3-9-research0043.txt
-183:          or contain apparent stop codons or frameshift mutations
-195:          (three or more internal stop codons or frameshifts
-216:          The presence of internal stop codons or frameshift
-220:          each hit that contained unverifiable stop codons or
-746:          stop codons or the presence of frameshift mutations
-748:          stop codons and frameshift mutations was used to classify
-757:          unverifiable stop codons or frameshift mutations and the
+        [cs15lfa22qi@ieng6-201]:technical:425$ grep -w -i -n "StOp" biomed/gb-2002-3-9-research0043.txt
+        183:          or contain apparent stop codons or frameshift mutations
+        195:          (three or more internal stop codons or frameshifts
+        216:          The presence of internal stop codons or frameshift
+        220:          each hit that contained unverifiable stop codons or
+        746:          stop codons or the presence of frameshift mutations
+        748:          stop codons and frameshift mutations was used to classify
+        757:          unverifiable stop codons or frameshift mutations and the
 
-Here, we can see we searched for "StOp" within one file using the `grep -w -i -n` command. The results were printed in the format of `<line number>:  "string where StOp appears in various forms without being a substring"`. The `<line number>` came from the addition of `-n` to the `grep` command, the exclusion of appearances where "StOp" is a substring of another string is from the addition of `-w`, and we search for "stop," "Stop," and other forms of "StOp" because of the addition of `-i`.
+Here, we can see we searched for "StOp" within one file using the `grep -w -i -n "string" <Path>` command. The results were printed in the format of `<line number>:  "string where StOp appears in various forms without being a substring"`. The `<line number>` came from the addition of `-n` to the `grep` command, the exclusion of appearances where "StOp" is a substring of another string is from the addition of `-w`, and we search for "stop," "Stop," and other forms of "StOp" because of the addition of `-i`.
