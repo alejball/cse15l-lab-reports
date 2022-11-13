@@ -35,11 +35,11 @@ The **.** just repeats our previous command of **cgnbase< esc >** and replaces "
 
 To recap, all we did was find the next appearance of the "start" parameter with **n** command and then changed it to "base" using the **.** command. Now, we have finished changing all appearances of "start" within DocSearchServer.java in the getFiles method to "base." Now all we need to do is save our changes and exit the file. This is done by: **:wq< Enter >**
 
-![saving and exiting the file](i2.png)
+![saving and exiting the file](k2.png)
 
 After entering the command you should be back at the terminal similar to what is shown below.
 
 ![terminal showing](j2.png)
 
-By my count, changed all appearanced of the "start" parameter to "base" in 25 key strokes
+By my count, changed all appearanced of the "start" parameter to "base" in 23 key strokes
 ## Part 2
