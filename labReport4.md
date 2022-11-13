@@ -4,7 +4,7 @@ We will be changing the name of the "start" parameter and its uses to "base" in 
 
 In order to actually do any changes though we need to use the command "vim DocSearchServer.java" to edit the file in the terminal.
 
-All the keystrokes are here: **/start< Enter >cgnbase< esc >n.n.n.:wq< Enter >**
+All the keystrokes are here: **/start< Enter >cgnbase< esc >n.n.:wq< Enter >**
 
 That's a lot to take in all at once so I will break it down piece by piece.
 
@@ -33,11 +33,7 @@ The **.** just repeats our previous command of **cgnbase< esc >** and replaces "
 
 ![using n.](g2.png)
 
-To recap, all we did was find the next appearance of the "start" parameter with **n** command and then changed it to "base" using the **.** command. Then we will use these commands again.
-
-![using n. for the 3rd time](h2.png)
-
-Again, all we did was find an appearance of the "start" parameter with the **n** command and change it to "base" using the **.** command. Now, we have finished changing all appearances of "start" within DocSearchServer.java to "base." Now all we need to do is save our changes and exit the file. This is done by: **:wq< Enter >**
+To recap, all we did was find the next appearance of the "start" parameter with **n** command and then changed it to "base" using the **.** command. Now, we have finished changing all appearances of "start" within DocSearchServer.java in the getFiles method to "base." Now all we need to do is save our changes and exit the file. This is done by: **:wq< Enter >**
 
 ![saving and exiting the file](i2.png)
 
