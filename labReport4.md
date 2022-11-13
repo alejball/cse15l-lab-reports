@@ -43,3 +43,7 @@ After entering the command you should be back at the terminal similar to what is
 
 By my count, changed all appearanced of the "start" parameter to "base" in 23 key strokes
 ## Part 2
+
+I would prefer working with vim than working on the file on my local computer then scp the file to a remote computer. It is faster in my opinion and if you are familiar with vim, editing files such as we did in part one would be easier in vim because it is quick and simple and does not require the extra step of scp the file over to a remote computer.
+
+Now, if the file required large scale changes (such as reworking how a method operates), working on the file on a local computer would be easier, in my opinion. Other than that, if it is just a simple renaming of a parameter, working on it using vim would be easier.
