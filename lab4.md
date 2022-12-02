@@ -44,6 +44,7 @@ After entering the command you should be back at the terminal similar to what is
 By my count, changed all appearanced of the "start" parameter to "base" in 23 key strokes
 ## Part 2
 Using vim: 50 seconds
+
 Edit in local: 1.5 minutes
 
 I would prefer working with vim than working on the file on my local computer then scp the file to a remote computer. It was faster, and in my opinion if you are familiar with vim, editing files such as we did in part one would be easier in vim because it is quick and simple and does not require the extra step of scp the file over to a remote computer.
